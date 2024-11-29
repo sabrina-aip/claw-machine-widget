@@ -1,36 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900');
 
-body {
-    font-family: 'Rubik', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    user-select: none;
-}
-
+/* PLACES TO CHANGE COLOURS */
 #console {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ec5c57;
+    background-color: white; /* Change the colour of the whole machine */
     width: 350px;
     height: 500px;
     padding: 30px;
     transform: scale(.7);
 }
 
-/* box aesthetic carry over from spelling bee*/
 .boxed {
     border: 2px black solid;
     padding: 15x 20px 15px 20px;
-    background-color: white;
+    background-color: white; /* Change the default colour of the buttons*/
     border-radius: 10px;
-    box-shadow: 5px 5px 0px black;
+    box-shadow: 5px 5px 0px black; /* Change the drop shadow on all the elements */
     margin: 10px;
 }
 
-#claw {
-    transition: transform 0.5s;
+#banner {
+    width: 100%;
+    text-align: center;
+    font-size: 40pt;
+    font-weight: 900;
+    color: white; /* Change the colour of the machine title text*/
+    border-radius: 10px;
+    padding: 0;
+    -webkit-text-stroke: 4px black; /* Change the outline colour of the machine title text*/
+    paint-order: stroke fill;
+    text-shadow: 5px 5px 0px black; /* Change the drop shadow colour of the machine title text - should probably be the same as the stroke*/
+}
+
+#window {
+    position: relative;
+    background-color: white; /* Change the background colour of the claw machine game window */
+    width: 100%;
+    height: 350px;
+    border: 2px black solid; /* Change the outline colour of the claw machine game window*/
+    padding: 15x 20px 15px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: 1s;
 }
 
 #claw-block {
@@ -40,7 +54,49 @@ body {
     margin-top: -25px;
     z-index: 2;
     position: relative;
-    background-color: #ec5c57;
+    background-color: white; /* Change the colour of the block that is on the rope carrying the claw*/
+}
+
+#drop {
+    border-radius: 50px;
+    color: black;
+    font-weight: 700;
+    background-color: white; /* If you want to make the drop button a different colour*/
+}
+
+.btn {
+    color: black;
+    padding: 10px 30px 10px 30px;
+    width:fit-content;  
+    margin-left: auto;
+    margin-right: auto;
+    background-color:  white; /* If you want to make the arrow buttons a different colour*/
+}
+
+#play-again {
+    opacity: 0;
+    transition: opacity 1s;
+    background-color: white; /* If you want to make the play again button a different colour*/
+}
+
+#download {
+    opacity: 0;
+    transition: opacity 1s;
+    background-color: white; /* If you want to make the download button a different colour*/
+}
+
+/* EVERYTHING ELSE */
+
+body {
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+#claw {
+    transition: transform 0.5s;
 }
 
 #claw-rail {
@@ -67,34 +123,6 @@ body {
     margin-top: 0;
     transition: transform .7s;
     transform-origin: top center;
-}
-
-#banner {
-    width: 100%;
-    text-align: center;
-    font-size: 40pt;
-    font-weight: 900;
-    color: #ffe2df;
-    border-radius: 10px;
-    padding: 0;
-    -webkit-text-stroke: 4px black;
-    paint-order: stroke fill;
-    text-shadow: 5px 5px 0px black;
-}
-
-
-/* claw machine window styles */
-#window {
-    position: relative;
-    background-color: #ffe2df;
-    width: 100%;
-    height: 350px;
-    border: 2px black solid;
-    padding: 15x 20px 15px 20px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    transition: 1s;
 }
 
 /* claw machine window content */
@@ -125,23 +153,6 @@ body {
     transition: 1s;
 }
 
-#drop {
-    border-radius: 50px;
-    color: black;
-    font-weight: 700;
-    background-color: #ffe2df;
-}
-
-/* button styles */
-.btn {
-    color: black;
-    padding: 10px 30px 10px 30px;
-    width:fit-content;  
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ffc4c4;
-}
-
 /* button hover effect */
 @media (hover: hover) {
     .btn.boxed:hover {
@@ -163,20 +174,6 @@ body {
     transition: 1s;
     transform: translateY(10px);
     text-align: center;
-}
-
-#play-again {
-    opacity: 0;
-    transition: opacity 1s;
-    background-color: #ffc4c4;
-
-}
-
-#download {
-    opacity: 0;
-    transition: opacity 1s;
-    background-color: #ffe2df;
-
 }
 
 #result-image {
