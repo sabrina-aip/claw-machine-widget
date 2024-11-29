@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--- There are two style sheets depending on screen size so the widget works on mobile -->
+    <link rel="stylesheet" media="only screen and (max-width: 400px)" href="game-style-mobile.css" />
+    <link rel="stylesheet" media="only screen and (min-width: 401px)" href="game-style.css" />
+    <!--- This gives us access to the arrow icons that we use in the game -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Claw Machine Game</title>
+</head>
+<body>
+    <div id="console" class="boxed">
+        <!--- You can rename the claw machine but it needs to be relatively short or else the game breaks lol -->
+        <!--- If you rename the claw machine, be sure to also copy that name over to the results.html page too -->
+        <div id="banner" class="" >CLAW GAME</div>
+
+        <!--- This set of divs make up the window of the claw machine where we see the capsules and the claw move-->
+        <div id="window" class="">
+            <div class="content">
+                <div>
+                    <img id="claw-rail" src="Assets\machine_imgs\clawRail.svg">
+                </div>
+                <div id="claw">
+                    <div id="claw-block" class="boxed"></div>
+                    <div>
+                        <img id="claw-rope" src="Assets\machine_imgs\clawRope.svg">
+                    </div>
+                    <div>
+                        <img id="claw-hands" src="Assets\machine_imgs\clawOpen.svg">   
+                    </div>
+                </div>
+                <div>
+                    <img id="ball-front" src="Assets\machine_imgs\ballFront.svg">
+                </div>
+            </div>
+        </div>
+
+        <!--- This set of divs are the controls of the claw machine with the arrow and drop button -->
+        <div id="controls">
+            <div class="btn boxed" id="left-arrow"><i class="fa-solid fa-arrow-left"></i></div>
+            <div class="btn boxed" id="drop">DROP</div>
+            <div class="btn boxed" id="right-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+    </div>
+</body>
+
+<!--- This tells our HTML page to look at the code in the game.js file to react when a user interacts with the page -->
+<script src="game.js"></script>
+</html>

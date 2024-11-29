@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="only screen and (max-width: 400px)" href="game-style-mobile.css" />
+    <link rel="stylesheet" media="only screen and (min-width: 401px)" href="game-style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Claw Machine Results</title>
+</head>
+<body>
+    <div id="console" class="boxed">
+        <!--- This div exists because something broke at some time and then i spent a few hours trying to fix it and then i gave up -->
+        <!--- Anyway, i have no idea if this bandaid div does anything but you probably shouldn't delete it -->
+        <div id="bandaid"></div>
+        <!--- If you rename the claw machine, be sure to also copy that name over to the results.html page too -->
+        <div id="banner">CLAW GAME</div>
+        <div id="result-window">
+            <div class="content">
+                <img id="result-image" src="" alt="">
+            </div>
+        </div>
+        <div>
+            <div class="btn boxed" id="download">DOWNLOAD TO SHARE</div>
+            <div class="btn boxed" id="play-again">PLAY AGAIN</div>
+        </div>
+    </div>
+</body>
+<script src="results.js"></script>
+</html>
